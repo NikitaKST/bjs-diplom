@@ -15,6 +15,10 @@ function loginFormAction(data) {
   });
 }
 
+// Присваиваем функцию обратного вызова свойствам объекта UserForm для аторизации
+userForm.loginFormCallback = loginFormAction;
+
+
 // Функция для запроса на регистрацию
 function registerFormAction(data) {
   ApiConnector.register(data, (response) => {
@@ -28,6 +32,5 @@ function registerFormAction(data) {
   });
 }
 
-// Присваиваем функции обратного вызова свойствам объекта UserForm
-userForm.loginFormCallback = loginFormAction;
+// Присваиваем функции обратного вызова свойствам объекта UserForm для регистрации
 userForm.registerFormCallback = registerFormAction;

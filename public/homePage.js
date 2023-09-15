@@ -114,5 +114,3 @@ favoritesWidget.removeUserCallback = (data) => {
     }
   });
 };
-
-  
